@@ -1,0 +1,22 @@
+
+State Machine - |rle|prev_state
+Name prev_state.WRITE_2 prev_state.s5 prev_state.s4 prev_state.s3 prev_state.s2 prev_state.IDLE 
+prev_state.s2 0 0 0 0 0 0 
+prev_state.s3 0 0 0 1 1 0 
+prev_state.s4 0 0 1 0 1 0 
+prev_state.s5 0 1 0 0 1 0 
+prev_state.WRITE_2 1 0 0 0 1 0 
+prev_state.IDLE 0 0 0 0 1 1 
+
+State Machine - |rle|state
+Name state.s0 state.buffer state.WRITE_2 state.WRITE_1 state.s5 state.s4 state.s3 state.s2 state.s1 state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 
+state.s1 0 0 0 0 0 0 0 0 1 1 
+state.s2 0 0 0 0 0 0 0 1 0 1 
+state.s3 0 0 0 0 0 0 1 0 0 1 
+state.s4 0 0 0 0 0 1 0 0 0 1 
+state.s5 0 0 0 0 1 0 0 0 0 1 
+state.WRITE_1 0 0 0 1 0 0 0 0 0 1 
+state.WRITE_2 0 0 1 0 0 0 0 0 0 1 
+state.buffer 0 1 0 0 0 0 0 0 0 1 
+state.s0 1 0 0 0 0 0 0 0 0 1 

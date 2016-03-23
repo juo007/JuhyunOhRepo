@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/JamesOh/Desktop/my EE Projects/ECE111/SHA-1/simulation/modelsim
+vSHA1_hash
+Z1 !s110 1458178777
+!i10b 1
+!s100 AUT]@841@bBd@X7D1L]lh0
+I`GB9C29h4MH55ji`Ib7=g2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1458178712
+8C:/Users/JamesOh/Desktop/my EE Projects/ECE111/SHA-1/SHA1_hash.v
+FC:/Users/JamesOh/Desktop/my EE Projects/ECE111/SHA-1/SHA1_hash.v
+L0 1
+Z3 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z4 !s108 1458178777.000000
+!s107 C:/Users/JamesOh/Desktop/my EE Projects/ECE111/SHA-1/SHA1_hash.v|
+!s90 -reportprogress|300|-work|work|C:/Users/JamesOh/Desktop/my EE Projects/ECE111/SHA-1/SHA1_hash.v|
+!i113 1
+Z5 o-work work
+n@s@h@a1_hash
+vSHA1_hash_testbench
+R1
+!i10b 1
+!s100 mV;MAD3lD]H=CfW>n[j_K2
+I87IMH=g=gUEgmTzBbBL0]0
+R2
+R0
+w1457388848
+8C:/Users/JamesOh/Desktop/my EE Projects/ECE111/SHA-1/SHA1_hash_testbench.v
+FC:/Users/JamesOh/Desktop/my EE Projects/ECE111/SHA-1/SHA1_hash_testbench.v
+L0 13
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/JamesOh/Desktop/my EE Projects/ECE111/SHA-1/SHA1_hash_testbench.v|
+!s90 -reportprogress|30|-work|work|C:/Users/JamesOh/Desktop/my EE Projects/ECE111/SHA-1/SHA1_hash_testbench.v|
+!i113 1
+R5
+n@s@h@a1_hash_testbench

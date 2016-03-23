@@ -1,0 +1,73 @@
+module Fibonacci(
+clk,
+reset_n,
+input_s,
+begin_fibo,
+done,
+fibo_out
+);
+
+input [4:0] input_s;
+input reset_n;
+input begin_fibo;
+input clk;
+output done;
+output[15:0] fibo_out;
+
+reg current_state, next_state;
+reg fibo_out;
+reg done;
+reg [15:0] f0 = 0;
+reg [15:0] f1 = 1;
+reg [15:0] f3;
+integer i;
+
+
+parameter s0=0,s1=1;
+
+always @ (current_state,begin_fibo)
+	case(current_state)
+		s0: begin
+			if(begin_fibo)
+				next_state=s1;
+			else
+				next_state=s0;
+			 end
+		s1: begin
+			if(input_s==0)begin
+				fibo_out=0;
+				//done=1;
+				next_state=s0;
+				end
+			else if(input_s==1)begin
+				fibo_out=1;
+				//done=1;
+				next_state=s0;
+				end
+			else
+				begin
+				fibo_out=f0+f1;
+				f0=f1;
+				f1=fibo_out;
+				if(fibo_out==input_s)begin
+					//done=1;
+					next_state=s0;
+					end
+				else
+					next_state=s1;
+				end
+			end
+	endcase
+			
+
+always @ (posedge clk or negedge reset_n)
+	begin
+		if(!reset_n)begin
+			current_state<=s0;
+			done<=s0;
+			end			
+		else
+			current_state<=next_state;	
+	end
+
+endmodule

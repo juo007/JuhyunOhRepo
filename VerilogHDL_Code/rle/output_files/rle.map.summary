@@ -1,0 +1,20 @@
+Analysis & Synthesis Status : Successful - Fri Feb 12 21:12:35 2016
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+Revision Name : rle
+Top-level Entity Name : rle
+Family : Arria II GX
+Logic utilization : N/A
+    Combinational ALUTs : 223
+    Memory ALUTs : 0
+    Dedicated logic registers : 187
+Total registers : 187
+Total pins : 214
+Total virtual pins : 0
+Total block memory bits : 0
+DSP block 18-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0
+Total DLLs : 0

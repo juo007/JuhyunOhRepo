@@ -1,0 +1,22 @@
+module Fibonacci(
+clk,
+reset_n,
+input_s,
+begin_fibo,
+done,
+fibo_out
+);
+input [4:0] input_s;
+input reset_n;
+input begin_fibo;
+input clk;
+output done;
+output[15:0] fibo_out;
+
+
+
+
+
+
+
+endmodule

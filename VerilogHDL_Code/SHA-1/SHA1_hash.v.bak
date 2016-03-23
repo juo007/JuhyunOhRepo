@@ -1,0 +1,141 @@
+module SHA1_hash (       
+	clk, 		
+	nreset, 	
+	start_hash,  
+	message_addr,	
+	message_size, 	
+	hash, 	
+	done, 		
+	port_A_clk,
+        port_A_data_in,
+        port_A_data_out,
+        port_A_addr,
+        port_A_we
+	);
+
+input	clk;
+input	nreset; 
+// Initializes the SHA1_hash module
+
+input	start_hash; 
+// Tells SHA1_hash to start hashing the given frame
+
+input 	[31:0] message_addr; 
+// Starting address of the messagetext frame
+// i.e., specifies from where SHA1_hash must read the messagetext frame
+
+input	[31:0] message_size; 
+// Length of the message in bytes
+
+output	[159:0] hash; 
+// hash results
+
+
+input   [31:0] port_A_data_out; 
+// read data from the dpsram (messagetext)
+
+output  [31:0] port_A_data_in;
+// write data to the dpsram (ciphertext)
+
+output  [15:0] port_A_addr;
+// address of dpsram being read/written 
+
+output  port_A_clk;
+// clock to dpsram (drive this with the input clk) 
+
+output  port_A_we;
+// read/write selector for dpsram
+
+output	done; // done is a signal to indicate that hash  is complete
+
+assign port_A_clk = clk; // drive dpsram clock with input clock
+
+// create registers for data output 
+reg done;
+reg [31:0] port_A_data_in;
+reg [15:0] port_A_addr=0;
+reg [159:0] hash;
+reg port_A_we;
+
+reg [15:0] incr_mess; // register to increment message address
+reg [15:0] size; // message size
+reg [3:0] state; // 4-bit register to hold state 
+
+reg [31:0] A, B, C, D, E;
+reg [31:0] h0, h1, h2, h3, h4;
+reg [511:0] m; // message register
+reg [31:0] w; // word register
+reg [31:0] k; // constant register
+reg [6:0] round; // hold current round number
+
+parameter IDLE=4'b0000;
+
+always @(posedge clk or negedge nreset)
+begin
+	if(!nreset) begin
+		state <= IDLE;
+		done <= 0;
+	end else begin
+		case(state)
+			IDLE: begin
+				if(start_hash) begin // initialize starting values
+					h0 <= 32'h67452301;
+					h1 <= 32'hEFCDAB89;
+					h2 <= 32'h98BADCFE;
+					h3 <= 32'h10325476;
+					h4 <= 32'hC3D2E1F0;
+					A <= h0;
+					B <= h1;
+					C <= h2;
+					D <= h3;
+					E <= h4;
+					incr_mess <= 16'b0;
+					port_A_addr <= message_addr;
+					port_A_we <= 0;
+					size <= message_size;
+					done <= 0;
+					state <= read;
+				end
+			end
+
+			read: begin
+				port_A_addr <= (message_addr + (512*incr_mess));
+				port_A_we <= 0;
+				state <= buffer;
+			end
+
+			buffer: begin
+				state <= s0;
+			end
+
+			// figure out how much padding 
+			pad0: begin 
+				size <= (size>>9) + 1; // divide by 512 and add one
+				state <= pad1;
+			end
+
+			pad1: begin
+				size <= ((size*512) - 64) - message_size - 1; // find number of 0's to pad
+				if(message_size == 512*size) begin // change this for all multiples of 512
+					size <= 447; // add 447 0's + extra 1 bit since message size == 512
+				end
+				state <= pad2;
+			end
+
+			pad2: begin // pad message with correct number of 0's
+				
+			end
+
+			s0: begin
+				if(round <= 19) begin
+					t <= (B & C) ^ (!B & D);
+				end else if (round <= 39) begin
+					t <= B ^ C ^ D;
+				end else if (round <= 59) begin
+					t <= (X & Y) ^ (X & Z) ^ (Y & Z);
+				end else begin
+					t <= B ^ C ^ D;
+				end
+			end
+	end
+end 

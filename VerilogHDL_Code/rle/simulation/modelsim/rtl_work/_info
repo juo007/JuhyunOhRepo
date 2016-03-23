@@ -1,0 +1,70 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/JamesOh/Desktop/my EE Projects/ECE111/rle/simulation/modelsim
+vrle
+Z1 !s110 1455340416
+!i10b 1
+!s100 9l4>fDfciIOePT7Q33^nZ1
+IF[4PE2YFMTGgUUXg?<IST3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1455340317
+8C:/Users/JamesOh/Desktop/my EE Projects/ECE111/rle/rle.v
+FC:/Users/JamesOh/Desktop/my EE Projects/ECE111/rle/rle.v
+L0 1
+Z3 OV;L;10.4b;61
+r1
+!s85 0
+31
+!s108 1455340415.000000
+!s107 C:/Users/JamesOh/Desktop/my EE Projects/ECE111/rle/rle.v|
+!s90 -reportprogress|300|-work|work|C:/Users/JamesOh/Desktop/my EE Projects/ECE111/rle/rle.v|
+!i113 1
+Z4 o-work work
+vrle_testbench
+R1
+!i10b 1
+!s100 `_VO?;k<@6konf_i]<RFY2
+IJbK76oP1LU_zJMJ`hK?S?2
+R2
+R0
+w1454988864
+8C:/Users/JamesOh/Desktop/my EE Projects/ECE111/rle/rle_testbench.v
+FC:/Users/JamesOh/Desktop/my EE Projects/ECE111/rle/rle_testbench.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z5 !s108 1455340416.000000
+!s107 C:/Users/JamesOh/Desktop/my EE Projects/ECE111/rle/rle_testbench.v|
+!s90 -reportprogress|300|-work|work|C:/Users/JamesOh/Desktop/my EE Projects/ECE111/rle/rle_testbench.v|
+!i113 1
+R4
+vrle_testbench2
+R1
+!i10b 1
+!s100 5[dIYVm4WLm];m@=DkX==0
+I^=l5B>D:Y]12n;k9VLifz0
+R2
+R0
+w1455062542
+8C:/Users/JamesOh/Desktop/my EE Projects/ECE111/rle/rle_testbench2.v
+FC:/Users/JamesOh/Desktop/my EE Projects/ECE111/rle/rle_testbench2.v
+L0 1
+R3
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/JamesOh/Desktop/my EE Projects/ECE111/rle/rle_testbench2.v|
+!s90 -reportprogress|300|-work|work|C:/Users/JamesOh/Desktop/my EE Projects/ECE111/rle/rle_testbench2.v|
+!i113 1
+R4

@@ -1,0 +1,92 @@
+# do Fibonacci_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4b Lib Mapping Utility 2015.05 May 27 2015
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera_lite/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera_lite/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/JamesOh/Desktop/my\ EE\ Projects/ECE111/fibonacci_calculator {C:/Users/JamesOh/Desktop/my EE Projects/ECE111/fibonacci_calculator/fibonacci_calculator.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 19:49:51 on Jan 19,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/JamesOh/Desktop/my EE Projects/ECE111/fibonacci_calculator" C:/Users/JamesOh/Desktop/my EE Projects/ECE111/fibonacci_calculator/fibonacci_calculator.v 
+# -- Compiling module fibonacci_calculator
+# 
+# Top level modules:
+# 	fibonacci_calculator
+# End time: 19:49:51 on Jan 19,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work {C:/Users/JamesOh/Desktop/my EE Projects/ECE111/fibonacci_calculator/fibonacci_calculator.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 19:50:16 on Jan 19,2016
+# vlog -reportprogress 300 -work work C:/Users/JamesOh/Desktop/my EE Projects/ECE111/fibonacci_calculator/fibonacci_calculator.v 
+# -- Compiling module fibonacci_calculator
+# 
+# Top level modules:
+# 	fibonacci_calculator
+# End time: 19:50:16 on Jan 19,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/JamesOh/Desktop/my EE Projects/ECE111/fibonacci_calculator/tb_fibonacci_calculator.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 19:50:16 on Jan 19,2016
+# vlog -reportprogress 300 -work work C:/Users/JamesOh/Desktop/my EE Projects/ECE111/fibonacci_calculator/tb_fibonacci_calculator.v 
+# -- Compiling module tb_fibonacci_calculator
+# 
+# Top level modules:
+# 	tb_fibonacci_calculator
+# End time: 19:50:16 on Jan 19,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_fibonacci_calculator
+# vsim work.tb_fibonacci_calculator 
+# Start time: 19:50:20 on Jan 19,2016
+# Loading work.tb_fibonacci_calculator
+# Loading work.fibonacci_calculator
+add wave sim:/tb_fibonacci_calculator/*
+run
+run
+run
+# 
+# ---------------------
+# 
+# Project 1 w/ Input: 5
+# 
+# CORRECT RESULT:     5, GOOD JOB!
+# 
+# ---------------------
+# 
+run
+run
+run
+# 
+# ---------------------
+# 
+# Project 1 w/ Input: 9
+# 
+# CORRECT RESULT:    34, GOOD JOB!
+# 
+# ---------------------
+# 
+run
+run
+run
+run
+# 
+# ---------------------
+# 
+# Project 1 w/ Input: 12
+# 
+# CORRECT RESULT:   144, GOOD JOB!
+# 
+# ---------------------
+# 
+# ** Note: $stop    : C:/Users/JamesOh/Desktop/my EE Projects/ECE111/fibonacci_calculator/tb_fibonacci_calculator.v(131)
+#    Time: 930 ps  Iteration: 1  Instance: /tb_fibonacci_calculator
+# Break in Module tb_fibonacci_calculator at C:/Users/JamesOh/Desktop/my EE Projects/ECE111/fibonacci_calculator/tb_fibonacci_calculator.v line 131
+# End time: 19:50:44 on Jan 19,2016, Elapsed time: 0:00:24
+# Errors: 0, Warnings: 0

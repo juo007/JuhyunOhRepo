@@ -1,0 +1,20 @@
+Analysis & Synthesis Status : Successful - Wed Mar 16 18:39:12 2016
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+Revision Name : SHA1_hash
+Top-level Entity Name : SHA1_hash
+Family : Arria II GX
+Logic utilization : N/A
+    Combinational ALUTs : 2,060
+    Memory ALUTs : 0
+    Dedicated logic registers : 889
+Total registers : 889
+Total pins : 310
+Total virtual pins : 0
+Total block memory bits : 0
+DSP block 18-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0
+Total DLLs : 0

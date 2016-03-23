@@ -1,0 +1,18 @@
+
+State Machine - |SHA1_hash|state
+Name state.pad0 state.d1 state.c1 state.r1 state.buffer state.read state.IDLE state.pad1 
+state.IDLE 0 0 0 0 0 0 0 0 
+state.read 0 0 0 0 0 1 1 0 
+state.buffer 0 0 0 0 1 0 1 0 
+state.r1 0 0 0 1 0 0 1 0 
+state.c1 0 0 1 0 0 0 1 0 
+state.d1 0 1 0 0 0 0 1 0 
+state.pad0 1 0 0 0 0 0 1 0 
+state.pad1 0 0 0 0 0 0 1 1 
+
+State Machine - |SHA1_hash|padflag
+Name padflag.11 padflag.10 padflag.01 padflag.00 
+padflag.00 0 0 0 0 
+padflag.01 0 0 1 1 
+padflag.10 0 1 0 1 
+padflag.11 1 0 0 1 

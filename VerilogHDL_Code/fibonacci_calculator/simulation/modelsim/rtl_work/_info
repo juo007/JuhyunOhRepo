@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/JamesOh/Desktop/my EE Projects/ECE111/fibonacci_calculator/simulation/modelsim
+vfibonacci_calculator
+Z1 !s110 1453261816
+!i10b 1
+!s100 Y]1cIJN<AH`gN@ekbA>oX3
+IfanChR[cgDHcm2fj1^den1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1453261712
+8C:/Users/JamesOh/Desktop/my EE Projects/ECE111/fibonacci_calculator/fibonacci_calculator.v
+FC:/Users/JamesOh/Desktop/my EE Projects/ECE111/fibonacci_calculator/fibonacci_calculator.v
+L0 1
+Z3 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z4 !s108 1453261816.000000
+!s107 C:/Users/JamesOh/Desktop/my EE Projects/ECE111/fibonacci_calculator/fibonacci_calculator.v|
+!s90 -reportprogress|300|-work|work|C:/Users/JamesOh/Desktop/my EE Projects/ECE111/fibonacci_calculator/fibonacci_calculator.v|
+!i113 1
+Z5 o-work work
+vtb_fibonacci_calculator
+R1
+!i10b 1
+!s100 @`RmOgi1R9enU3JKB[hN]1
+I5AU;_Q8@3F0YF[Ob0URZ;1
+R2
+R0
+w1453020440
+8C:/Users/JamesOh/Desktop/my EE Projects/ECE111/fibonacci_calculator/tb_fibonacci_calculator.v
+FC:/Users/JamesOh/Desktop/my EE Projects/ECE111/fibonacci_calculator/tb_fibonacci_calculator.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/JamesOh/Desktop/my EE Projects/ECE111/fibonacci_calculator/tb_fibonacci_calculator.v|
+!s90 -reportprogress|300|-work|work|C:/Users/JamesOh/Desktop/my EE Projects/ECE111/fibonacci_calculator/tb_fibonacci_calculator.v|
+!i113 1
+R5

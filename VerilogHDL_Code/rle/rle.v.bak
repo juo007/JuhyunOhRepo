@@ -1,0 +1,36 @@
+module rle (
+	clk, 		
+	nreset, 	
+	start,
+	message_addr,	
+	message_size, 	
+	rle_addr, 	
+	rle_size, 	
+	done, 		
+	port_A_clk,
+        port_A_data_in,
+        port_A_data_out,
+        port_A_addr,
+        port_A_we
+	);
+
+input	clk;
+input	nreset;
+// Initializes the RLE module
+
+input	start;
+// Tells RLE to start compressing the given frame
+
+input 	[31:0] message_addr;
+// Starting address of the plaintext frame
+// i.e., specifies from where RLE must read the plaintext frame
+
+input	[31:0] message_size;
+// Length of the plain text in bytes
+
+input	[31:0] rle_addr;
+// Starting address of the ciphertext frame
+// i.e., specifies where RLE must write the ciphertext frame
+
+input   [31:0] port_A_data_out;
+// read data from the dpsram (plaintext)

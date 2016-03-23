@@ -1,0 +1,22 @@
+Fitter Status : Successful - Tue Feb 09 23:14:52 2016
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+Revision Name : rle
+Top-level Entity Name : rle
+Family : Arria II GX
+Device : EP2AGX45DF29I5
+Timing Models : Final
+Logic utilization : < 1 %
+    Combinational ALUTs : 223 / 36,100 ( < 1 % )
+    Memory ALUTs : 0 / 18,050 ( 0 % )
+    Dedicated logic registers : 187 / 36,100 ( < 1 % )
+Total registers : 187
+Total pins : 214 / 404 ( 53 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 2,939,904 ( 0 % )
+DSP block 18-bit elements : 0 / 232 ( 0 % )
+Total GXB Receiver Channel PCS : 0 / 8 ( 0 % )
+Total GXB Receiver Channel PMA : 0 / 8 ( 0 % )
+Total GXB Transmitter Channel PCS : 0 / 8 ( 0 % )
+Total GXB Transmitter Channel PMA : 0 / 8 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
+Total DLLs : 0 / 2 ( 0 % )
